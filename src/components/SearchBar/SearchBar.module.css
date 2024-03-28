@@ -7,8 +7,9 @@
 .input {
     width: 240px;
     height: 35px;
+    margin-right: 20px;
     border-radius: 8px;
-    background-color: rgb(245, 232, 221);
+    background-color: rgba(183, 193, 233, 0.24);
 
 }
 
@@ -16,6 +17,3 @@
     color: black;
 }
 
-.input:focus {
-    background-color: rgb(238, 211, 217);
-}
