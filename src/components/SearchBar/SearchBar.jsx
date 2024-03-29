@@ -5,10 +5,10 @@ import css from "./SearchBar.module.css";
 
 const SearchBar = ({onSubmit}) => {
     const handleSubmit = (values, {resetForm}) => {
+        notify(values);
         const results = values.query;
         onSubmit(results);
-        notify(values);
-resetForm();
+        resetForm();
     };
 
     const notify = (values) => {
