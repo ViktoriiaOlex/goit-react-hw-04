@@ -4,15 +4,17 @@ import { Toaster, toast } from "react-hot-toast";
 import css from "./SearchBar.module.css";
 
 const SearchBar = ({ onSubmit }) => {
-  const handleSubmit = (values, { resetForm }) => {
+  const handleSubmit = (values, { resetForm, setSubmitting }) => {
     if (!values.query || values.query.trim() === "") {
       notify(); 
+      setSubmitting(false);
       return;
     }
-
+  
     const results = values.query;
     onSubmit(results);
     resetForm();
+    setSubmitting(false);
   };
 
   const notify = () => {
